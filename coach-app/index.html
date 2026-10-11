@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>DUABC Coach</title>
+  <meta name="description" content="DUABC check-in">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+  <meta name="color-scheme" content="light dark">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="DUABC">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <!--STARTUP-IMAGES-->
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1320x2868-light.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1320x2868-dark.png" media="(device-width: 440px) and (device-height: 956px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1206x2622-light.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1206x2622-dark.png" media="(device-width: 402px) and (device-height: 874px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1260x2736-light.png" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1260x2736-dark.png" media="(device-width: 420px) and (device-height: 912px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1290x2796-light.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1290x2796-dark.png" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1179x2556-light.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1179x2556-dark.png" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1284x2778-light.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1284x2778-dark.png" media="(device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1170x2532-light.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1170x2532-dark.png" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1125x2436-light.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1125x2436-dark.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1242x2688-light.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-1242x2688-dark.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-828x1792-light.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-828x1792-dark.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-750x1334-light.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) and (prefers-color-scheme: light)">
+  <link rel="apple-touch-startup-image" href="icons/splash/splash-750x1334-dark.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait) and (prefers-color-scheme: dark)">
+  <!--/STARTUP-IMAGES-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app" class="app" hidden>
+    <header class="topbar">
+      <button id="sessionBtn" class="topbar-btn session-btn" type="button" aria-label="Change session">
+        <span class="wordmark">DUABC</span>
+        <span class="dot">·</span>
+        <span id="sessionName" class="session-name">…</span>
+        <span id="sessionDate" class="session-date"></span>
+        <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <button id="coachBtn" class="topbar-btn coach-btn" type="button" aria-label="Coach menu">
+        <span id="coachName"></span>
+        <svg id="muteIcon" class="mute-icon" viewBox="0 0 16 16" aria-hidden="true" hidden><path d="M3 6h2l3-2.5v9L5 10H3z M11 6l4 4 M15 6l-4 4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </header>
+
+    <main class="main">
+      <section id="scanner" class="scanner" aria-label="QR scanner">
+        <div id="reader" class="reader"></div>
+        <div class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <button id="scannerMsg" class="scanner-msg" type="button" hidden></button>
+        <div id="pill" class="pill" hidden><span class="spinner"></span><span id="pillText">Checking…</span></div>
+      </section>
+
+      <div class="search">
+        <svg class="search-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.75" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4.5 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input id="search" type="search" inputmode="search" placeholder="Search name" autocomplete="off" autocorrect="off"
+               autocapitalize="words" spellcheck="false" enterkeyhint="search" aria-label="Search member name">
+        <button id="clearSearch" class="clear-btn" type="button" aria-label="Clear" hidden>
+          <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="8" fill="currentColor"/><path d="M7 7l6 6M13 7l-6 6" stroke="var(--surface)" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <p id="indexState" class="index-state" aria-live="polite"></p>
+      <ul id="results" class="results" aria-label="Matching members"></ul>
+    </main>
+  </div>
+
+  <!-- Full-screen green / red result -->
+  <div id="flash" class="flash" role="alert" aria-live="assertive">
+    <div class="flash-icon" id="flashIcon"></div>
+    <div class="flash-title" id="flashTitle"></div>
+    <div class="flash-detail" id="flashDetail"></div>
+    <button class="flash-ec" id="flashEc" type="button" hidden>Emergency contact</button>
+    <div class="flash-ec-box" id="flashEcBox" hidden></div>
+  </div>
+
+  <!-- Slide-up card -->
+  <div id="backdrop" class="backdrop"></div>
+  <section id="sheet" class="sheet" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="grabber" aria-hidden="true"></div>
+    <div id="sheetBody"></div>
+  </section>
+
+  <!-- First-run panels -->
+  <section id="setupPanel" class="panel" hidden>
+    <div class="panel-inner">
+      <p class="wordmark wordmark-lg">DUABC</p>
+      <h1 class="panel-title">Set up this phone</h1>
+      <p class="panel-text">Open the coach link the Treasurer sent you. On iPhone, if you added the app to your home screen, paste that link here once:</p>
+      <form id="setupForm" class="panel-form" autocomplete="off">
+        <input id="setupInput" class="field" type="url" placeholder="Paste the coach link" autocapitalize="off" autocorrect="off" spellcheck="false" required>
+        <button class="btn-primary" type="submit">Continue</button>
+        <button id="pasteBtn" class="btn-text" type="button">Paste from clipboard</button>
+      </form>
+      <p id="setupError" class="panel-error" hidden></p>
+    </div>
+  </section>
+
+  <section id="namePanel" class="panel" hidden>
+    <div class="panel-inner">
+      <p class="wordmark wordmark-lg">DUABC</p>
+      <h1 class="panel-title">Your name</h1>
+      <p class="panel-text">So the club knows who checked people in. Just once on this phone.</p>
+      <form id="nameForm" class="panel-form" autocomplete="off">
+        <input id="nameInput" class="field" type="text" list="coachList" placeholder="First and last name" autocapitalize="words" autocorrect="off" spellcheck="false" maxlength="40" required>
+        <datalist id="coachList"></datalist>
+        <button id="nameSubmit" class="btn-primary" type="submit">Continue</button>
+      </form>
+      <p id="nameError" class="panel-error" hidden></p>
+    </div>
+  </section>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <script src="config.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"
+          integrity="sha384-c9d8RFSL+u3exBOJ4Yp3HUJXS4znl9f+z66d1y54ig+ea249SpqR+w1wyvXz/lk+"
+          crossorigin="anonymous" referrerpolicy="no-referrer"
+          onerror="var s=document.createElement('script');s.src='vendor/html5-qrcode.min.js';document.head.appendChild(s);"></script>
+  <script src="app.js"></script>
+</body>
+</html>
