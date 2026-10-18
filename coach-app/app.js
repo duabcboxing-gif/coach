@@ -17,7 +17,7 @@
   // ------------------------------------------------------------------
 
   function norm(s) {
-    return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+    return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '')
       .toLowerCase().replace(/[-'’.]/g, ' ').replace(/[^a-z\s]/g, '').replace(/\s+/g, ' ').trim();
   }
 
@@ -267,15 +267,6 @@
     $('flashIcon').innerHTML = kind === 'success' ? ICON_TICK : ICON_CROSS;
     $('flashTitle').textContent = title || '';
     $('flashDetail').textContent = detail || '';
-    $('flashEcBox').hidden = true;
-    $('flashEcBox').textContent = '';
-    var ecBtn = $('flashEc');
-    ecBtn.hidden = !member;
-    ecBtn.onclick = member ? function (ev) {
-      ev.stopPropagation();
-      clearTimeout(flashTimer);               // stay open while reading the contact
-      showEmergency(member, $('flashEcBox'), true);
-    } : null;
     S.overlay = 'flash';
     requestAnimationFrame(function () { f.classList.add('show'); });
     feedback(kind === 'success' ? 'success' : 'error');
@@ -352,39 +343,6 @@
     });
   }
 
-  function ecLink(member, container) {
-    var wrap = el('div', 'ec');
-    var link = el('button', 'ec-link', 'Emergency contact');
-    link.type = 'button';
-    var box = el('div', 'ec-box');
-    box.hidden = true;
-    link.onclick = function () { showEmergency(member, box, false); };
-    wrap.appendChild(link);
-    wrap.appendChild(box);
-    container.appendChild(wrap);
-  }
-
-  function showEmergency(member, box, onFlash) {
-    box.hidden = false;
-    box.textContent = '';
-    if (!member.id || member.status === 'Not registered') {
-      box.appendChild(el('p', 'ec-none', 'No emergency contact on file – ask them to register'));
-      return;
-    }
-    box.appendChild(el('p', 'ec-loading', 'Loading…'));
-    api('emergency', { memberId: member.id }).then(function (r) {
-      box.textContent = '';
-      if (!r.has) { box.appendChild(el('p', 'ec-none', 'No emergency contact on file – ask them to register')); return; }
-      box.appendChild(el('p', 'ec-name', r.ecName + (r.ecRel ? ' (' + r.ecRel + ')' : '')));
-      var call = el('a', onFlash ? 'ec-call ec-call-light' : 'ec-call', 'Call ' + r.ecPhone);
-      call.href = 'tel:' + String(r.ecPhone).replace(/[^\d+]/g, '');
-      box.appendChild(call);
-    }).catch(function (err) {
-      box.textContent = '';
-      box.appendChild(el('p', 'ec-none', err.message));
-    });
-  }
-
   // ------------------------------------------------------------------
   // Results → screens
   // ------------------------------------------------------------------
@@ -411,7 +369,6 @@
       personHeader(body, r.member.name, r.member.status, [
         'Checked in' + (r.time ? ' at ' + r.time : '') + (r.coach ? ' by ' + r.coach : '') + ' this session.'
       ]);
-      ecLink(r.member, body);
       body.appendChild(primaryBtn('OK', function () { closeSheet(); }));
     }, { tone: 'amber' });
     feedback('decision');
@@ -458,7 +415,6 @@
         formWrap.appendChild(show);
         body.appendChild(formWrap);
       }
-      ecLink(member, body);
       body.appendChild(textBtn('Cancel', function () { closeSheet(); }, 'btn-cancel'));
     });
     feedback('decision');
